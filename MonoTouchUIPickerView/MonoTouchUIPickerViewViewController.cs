@@ -37,6 +37,7 @@ namespace MonoTouchUIPickerView
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
+			this.SetupPicker();
 		}
 		
 		public override void ViewDidUnload ()
@@ -55,6 +56,17 @@ namespace MonoTouchUIPickerView
 		{
 			// Return true for supported orientations
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
+		}
+
+		private void SetupPicker()
+		{
+			UIPickerView picker = new UIPickerView();
+			PickerModel model = new PickerModel(this.colors);
+			model.PickerChanged += (sender, e) => {
+				this.selectedColor = e.SelectedValue;
+			};
+
+			this.ColorTextField.InputView = picker;
 		}
 	}
 }
