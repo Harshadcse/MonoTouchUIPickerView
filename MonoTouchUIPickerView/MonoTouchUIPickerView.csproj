@@ -91,6 +91,8 @@
     <Compile Include="MonoTouchUIPickerViewViewController.designer.cs">
       <DependentUpon>MonoTouchUIPickerViewViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="PickerModel.cs" />
+    <Compile Include="PickerChangedEventArgs.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MonoTouchUIPickerViewViewController.xib" />

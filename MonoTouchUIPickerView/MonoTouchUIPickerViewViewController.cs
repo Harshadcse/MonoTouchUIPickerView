@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 using MonoTouch.Foundation;
@@ -8,6 +9,17 @@ namespace MonoTouchUIPickerView
 {
 	public partial class MonoTouchUIPickerViewViewController : UIViewController
 	{
+		private readonly IList<string> colors = new List<string>
+		{
+			"Blue",
+			"Green",
+			"Red",
+			"Purple",
+			"Yellow"
+		};
+
+		private string selectedColor;
+
 		public MonoTouchUIPickerViewViewController () : base ("MonoTouchUIPickerViewViewController", null)
 		{
 		}
