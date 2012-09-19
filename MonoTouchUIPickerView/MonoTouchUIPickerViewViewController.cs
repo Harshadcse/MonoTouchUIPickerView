@@ -60,11 +60,14 @@ namespace MonoTouchUIPickerView
 
 		private void SetupPicker()
 		{
-			UIPickerView picker = new UIPickerView();
 			PickerModel model = new PickerModel(this.colors);
 			model.PickerChanged += (sender, e) => {
 				this.selectedColor = e.SelectedValue;
 			};
+
+			UIPickerView picker = new UIPickerView();
+			picker.ShowSelectionIndicator = true;
+			picker.Model = model;
 
 			this.ColorTextField.InputView = picker;
 		}
