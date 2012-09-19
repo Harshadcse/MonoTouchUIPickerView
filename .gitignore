@@ -4,3 +4,33 @@ obj
 
 # mstest test results
 TestResults
+
+#User Specific
+*.userprefs
+*.usertasks
+
+#Mono Project Files
+*.pidb
+*.resources
+test-results/
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+*.swp
+*.nib
+
+*/bin/*
+*/obj/*
+*/*/bin/*
+*/*/obj/*
